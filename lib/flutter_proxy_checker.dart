@@ -7,7 +7,7 @@ class FlutterProxyChecker {
       const MethodChannel('flutter_proxy_checker');
 
   static Future<bool?> isEnabledProxy() async {
-    final Map<dynamic, dynamic> map = await (_channel.invokeMethod("isEnabledProxy") as FutureOr<Map<dynamic, dynamic>>);
+    final Map<dynamic, dynamic> map = await (_channel.invokeMethod("isEnabledProxy"));
     return map["result"] as bool?;
   }
 }
